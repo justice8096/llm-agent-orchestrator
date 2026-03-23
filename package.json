@@ -1,0 +1,34 @@
+{
+  "name": "llm-agent-orchestrator",
+  "version": "1.0.0",
+  "description": "Wave-based orchestrator for multi-agent LLM pipelines with pluggable backends",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./orchestrator": "./src/orchestrator.js",
+    "./lib/prompt-loader": "./src/lib/prompt-loader.js",
+    "./lib/context-builder": "./src/lib/context-builder.js",
+    "./lib/result-validator": "./src/lib/result-validator.js",
+    "./lib/file-writer": "./src/lib/file-writer.js",
+    "./lib/run-report": "./src/lib/run-report.js"
+  },
+  "author": "Justice",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/llm-agent-orchestrator.git"
+  },
+  "keywords": [
+    "llm",
+    "agent",
+    "orchestrator",
+    "wave-based",
+    "multi-agent",
+    "pipeline"
+  ],
+  "files": [
+    "src",
+    "examples"
+  ]
+}

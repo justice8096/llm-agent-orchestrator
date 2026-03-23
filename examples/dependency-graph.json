@@ -1,0 +1,26 @@
+{
+  "description": "Example dependency graph for agent orchestrator. Agents within a wave run in parallel; waves execute serially.",
+  "waves": [
+    {
+      "wave": 0,
+      "label": "Foundation",
+      "agents": ["rate-fetch", "env-setup"],
+      "notes": "No dependencies. These agents must complete before wave 1."
+    },
+    {
+      "wave": 1,
+      "label": "Core Processing",
+      "agents": ["data-transform", "validation", "enrichment"],
+      "notes": "All depend on wave 0. Run in parallel within this wave."
+    },
+    {
+      "wave": 2,
+      "label": "Post-Processing",
+      "agents": ["report-gen", "index-sync"],
+      "notes": "Reads all updated files from waves 0-1."
+    }
+  ],
+  "alwaysRunLast": ["cleanup"],
+  "critical": ["rate-fetch"],
+  "criticalNote": "If rate-fetch fails, skip wave 1."
+}
