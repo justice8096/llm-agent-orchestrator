@@ -8,3 +8,11 @@ export { buildContext } from './lib/context-builder.js';
 export { validateResult } from './lib/result-validator.js';
 export { writeResults } from './lib/file-writer.js';
 export { createReport } from './lib/run-report.js';
+export {
+  LLMAdapter,
+  MockLLMAdapter,
+  OpenAIAdapter,
+  AnthropicAdapter,
+  OllamaAdapter,
+  CustomLLMAdapter
+} from './lib/llm-adapter.js';

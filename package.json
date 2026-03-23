@@ -4,6 +4,7 @@
   "description": "Wave-based orchestrator for multi-agent LLM pipelines with pluggable backends",
   "type": "module",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "exports": {
     ".": "./src/index.js",
     "./orchestrator": "./src/orchestrator.js",
