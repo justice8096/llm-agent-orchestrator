@@ -59,3 +59,20 @@ Waves run serially; agents within a wave run in parallel (up to --concurrency).
 - Refiner evaluates source quality scores and suggests prompt improvements
 - Critical agents can gate downstream waves (skip if failed)
 - All file I/O through lib/ modules (no direct fs calls in orchestrator)
+
+
+## LLM Compliance Integration
+This project orchestrates LLM calls, making it subject to AI regulations (EU AI Act, NIST AI RMF, etc.) depending on deployment jurisdiction.
+
+### Applicable Compliance Areas
+- **Transparency Documentation** (Template 01) — Document the LLM models used, their capabilities, and limitations
+- **Automated Decision Logic** (Template 04) — If agents make decisions affecting people, document the logic
+- **Human Oversight Design** (Template 09) — Define oversight model for agent pipelines
+- **Risk Classification** (Template 17) — Classify the AI system's risk tier under EU AI Act
+- **Governance Framework** (Template 12) — Establish governance for multi-agent systems
+
+### Using the Compliance Skill
+The ai-compliance skill (skills/ai-compliance/) provides guidance on which regulations apply and how to collect evidence. Run the full pipeline:
+1. `node extract-evidence.js --repo .` (from ai-compliance-extractors)
+2. Fill interactive assessments (compliance-assessment-tools)
+3. `node autofill.js` (from compliance-autofill)
