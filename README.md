@@ -227,4 +227,4 @@ console.log(report.json);      // Detailed JSON
 
 ## License
 
-MIT © 2026 Justice
+MIT © 2026 Justice E. Chase

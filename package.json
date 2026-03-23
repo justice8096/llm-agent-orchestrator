@@ -17,7 +17,7 @@
   "scripts": {
     "test": "vitest run"
   },
-  "author": "Justice",
+  "author": "Justice E. Chase",
   "license": "MIT",
   "repository": {
     "type": "git",
